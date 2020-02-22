@@ -53,7 +53,7 @@ Things you may want to cover:
 |body|text|null: ture|
 |image|string|null: ture|
 |group_id|integer|null: false, foreign_key: ture|
-|user_id|integer|null: false, foreign|_key: ture|
+|user_id|integer|null: false, foreign_key: ture|
 
 ### Association
 - belongs_to :group
