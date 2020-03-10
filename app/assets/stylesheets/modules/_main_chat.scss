@@ -4,7 +4,7 @@
   color: black;
   .current-group{
     height: 100px;
-    background-color: #ffffff;
+    background-color: $white;
     border-bottom: 1px solid #eeeeee;
     display: flex;
     justify-content: space-between;
@@ -34,12 +34,71 @@
       margin-top: 28px;
     }
   }
-  .message-list{
+  .messages-list{
     height: calc(100vh - 190px);
-    background-color: #fafafa;
+    background-color: $light_gray;
+    padding: 35px 40px;
+    box-sizing: border-box;
+    overflow: scroll;
+    .message{
+      padding-bottom: 46px;
+      .info{
+        display: flex;
+        margin-bottom: 12px;
+        &__name{
+          font-size: 16px;
+          color: #333333;
+          padding-right: 10px;
+        }
+        &__date{
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      .comment{
+        font-size: 14px;
+        color: #434A54;
+      }
+    }
+
   }
-  .message-form{
+
+
+  .form {
+    background-color: $gray;
+    box-sizing: border-box;
     height: 90px;
-    background-color: #d2d2d2;
+    padding: 20px 50px 20px 40px;
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 160px);
+      padding-left: 10px;
+    }
+    &__mask {
+      background-color: #fafafa;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+        cursor: pointer;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    .send {
+      background-color: #38aef0;
+      color: #ffffff;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+      cursor: pointer;
+    }
   }
 }
