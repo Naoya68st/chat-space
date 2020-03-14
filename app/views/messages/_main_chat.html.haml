@@ -1,0 +1,56 @@
+.main-chat
+  .current-group
+    .current-group__left
+      .current-group__left__name
+        グループ名
+      .current-group__left__members-list
+        Member:
+        member
+        member
+    .current-group__btn-edit
+      =link_to "#" do
+        edit
+  .messages-list
+    .message
+      .info
+        .info__name
+          name
+        .info__date
+          2020/03/08(Sun) 15:00:00
+      .comment
+        hello!
+    .message
+      .info
+        .info__name
+          name
+        .info__date
+          2020/03/08(Sun) 15:00:00
+      .comment
+        hello!
+    .message
+      .info
+        .info__name
+          name
+        .info__date
+          2020/03/08(Sun) 15:00:00
+      .comment
+        hello!
+    .message
+      .info
+        .info__name
+          name
+        .info__date
+          2020/03/08(Sun) 15:00:00
+      .comment
+        hello!
+  
+  .form
+    %message-form
+      %input.form__message{type: 'text', placeholder: 'type a message'}
+      .form__mask
+        %label.form__mask__image
+          = icon('far', 'image',class: 'icon')
+          %input.hidden{type: 'file'}
+      %input.send{type: 'submit', value: 'Send'}
+
+      
