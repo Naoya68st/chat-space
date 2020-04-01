@@ -2,47 +2,17 @@
   .current-group
     .current-group__left
       .current-group__left__name
-        グループ名
+        #{@group.name}
       .current-group__left__members-list
         Member:
-        member
-        member
+        - @group.users.each do |group_user|
+          #{group_user.name}
     .current-group__btn-edit
-      =link_to "#" do
+      =link_to edit_group_path(@group) do
         edit
+
   .messages-list
     .message
-      .info
-        .info__name
-          name
-        .info__date
-          2020/03/08(Sun) 15:00:00
-      .comment
-        hello!
-    .message
-      .info
-        .info__name
-          name
-        .info__date
-          2020/03/08(Sun) 15:00:00
-      .comment
-        hello!
-    .message
-      .info
-        .info__name
-          name
-        .info__date
-          2020/03/08(Sun) 15:00:00
-      .comment
-        hello!
-    .message
-      .info
-        .info__name
-          name
-        .info__date
-          2020/03/08(Sun) 15:00:00
-      .comment
-        hello!
     = render @messages
   -# .messages
   -# = render partial: 'message', collection: @messages
